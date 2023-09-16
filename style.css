@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    /* Cores */
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
+
+    --very-dark-blue: #4c4e61;
+    --grayish-blue: #a3a5ae;
+    --very-light-gray: #fafafa;
+    /* Fontes */
+    --fonte-primaria: 'Poppins', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--fonte-primaria);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90dvh;
+    margin-top: 2em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.main-text h1 {
+    font-size: 2em;
+    color: var(--very-dark-blue);
+    font-weight: 200;
+}
+
+.main-text h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.main-text p {
+    width: 500px;
+    color: var(--grayish-blue);
+}
+
+.card-list ul {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    margin: 2em 0 5em;
+}
+
+.card-list ul li {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1em;
+    align-items: start;
+    border-top: 5px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--very-light-gray);
+}
+
+.card-list ul li:nth-child(1) {
+    border-top-color: var(--cyan);
+    top: 30%;
+}
+
+.card-list ul li:nth-child(2) {
+    border-top-color: var(--red);
+    left: 350px;
+}
+
+.card-list ul li:nth-child(3) {
+    border-top-color: var(--orange);
+    top: 30%;
+    left: 700px;
+}
+
+.card-list ul li:nth-child(4) {
+    border-top-color: var(--blue);
+    top: calc(30% + 150px);
+    left: 350px;
+}
+
+.card-list ul li h3 {
+    font-weight: 600;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.card-list ul li img {
+    align-self: flex-end;
+}
+
+@media (max-width: 1100px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .main-text h1,
+    .main-text h2 {
+        font-size: 1.5em;
+    }
+
+    .main-text p {
+        width: 80%;
+    }
+
+    .main-container {
+        margin-bottom: 10em;
+    }
+
+    .card-list ul {
+        width: 300px;
+        min-height: 100dvh;
+        flex-wrap: wrap;
+    }
+
+    .card-list ul li {
+        width: 280px;
+        margin: 0 auto;
+        padding: .5em;
+        position: static;
+        margin-bottom: 2em;
+    }
+}
